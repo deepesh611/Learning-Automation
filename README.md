@@ -76,15 +76,14 @@ Contributions are always appreciated. Here are some guidelines to help you get s
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people:
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 
-<!-- prettier-ignore -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/deepesh611"><img src="https://avatars.githubusercontent.com/u/deepesh611?v=4" width="100px;" alt=""/><br /><sub><b>Deepesh Patil</b></sub></a><br /></td>
-    <!-- Add more contributors here -->
-  </tr>
-</table>
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## License 📄
 

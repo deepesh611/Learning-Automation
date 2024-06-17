@@ -1,0 +1,8 @@
+# ───────────────────────────────
+#   APPLICATION DEPENDENCIES
+# ───────────────────────────────
+
+psutil
+colorama
+requests
+subprocess.run

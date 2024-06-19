@@ -18,11 +18,12 @@
       "contributions": [
         "projectManagement",
         "code",
-        "doc"
+        "doc",
+        "maintenance"
       ]
     }
   ],
   "contributorsPerLine": 7,
-  "linkToUsage": false
+  "linkToUsage": false,
+  "commitType": "docs"
 }
-

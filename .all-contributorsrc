@@ -3,52 +3,6 @@
   "projectOwner": "deepesh611",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "files": [
-    "README.md"
-  ],
-  "imageSize": 50,
-  "commit": true,
-  "commitConvention": "angular",
-  "contributors": [
-    {
-      "login": "deepesh611",
-      "name": "Deepesh Patil",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123585104?v=4",
-      "profile": "https://github.com/deepesh611",
-      "contributions": [
-        "projectManagement",
-        "code",
-        "doc"
-      ]
-    }
-  ],
-  "contributorsPerLine": 7,
-  "linkToUsage": false
-}
-
-    "projectName": "Learning-Automation",
-    "projectOwner": "deepesh611",
-    "repoType": "github",
-    "repoHost": "https://github.com",
-    "files": ["README.md"],
-    "imageSize": 100,
-    "commit": false,
-    "contributorsPerLine": 7,
-    "contributorsSortAlphabetically": false,
-    "badgeTemplate": "[![All Contributors](https://img.shields.io/github/all-contributors/<%= projectOwner %>/<%= projectName %>?color=ee8449&style=flat-square)](#contributors)",
-    "contributorTemplate": "<a href=\"<%= contributor.profile %>\"><img src=\"<%= contributor.avatar_url %>\" width=\"<%= options.imageSize %>px;\" alt=\"\"/><br /><sub><b><%= contributor.name %></b></sub></a>",
-    "wrapperTemplate": "\n<table>\n  <tbody><%= bodyContent %>  </tbody>\n<%= tableFooterContent %></table>\n\n",
-    "types": {
-      "custom": {
-        "symbol": "🔭",
-        "description": "A custom contribution type.",
-        "link": "[<%= symbol %>](<%= url %> \"<%= description %>\"),"
-      }
-    },{
-  "projectName": "Learning-Automation",
-  "projectOwner": "deepesh611",
-  "repoType": "github",
-  "repoHost": "https://github.com",
   "files": ["README.md"],
   "imageSize": 100,
   "commit": true,
@@ -81,8 +35,3 @@
     }
   ]
 }
-
-    "linkToUsage": true,
-    "skipCi": true,
-    "contributors": []
-  }

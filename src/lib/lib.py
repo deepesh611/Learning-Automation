@@ -7,12 +7,25 @@ from colorama import Fore
 
 repo_path = "D:\\Codings\\"
 vscode_path = r"D:\Microsoft VS Code\Code.exe"
-gitkraken_path = r"C:\Users\deepe\AppData\Local\gitkraken\gitkraken.exe"
+gitkraken_path = r"<path to GitKraken executable>"
 edge_path = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 
 
 def close_specific_applications():
-    apps_to_close = ["Code", "msedge", "chrome", "GitKraken", "WhatsApp", "Calculator", "notepad", "Excel", "Word", "VirtualBox", "PowerPoint", "OneNote"]
+    apps_to_close = [
+        "Code", 
+        "Word", 
+        "Excel", 
+        "chrome", 
+        "msedge", 
+        "OneNote",
+        "notepad", 
+        "WhatsApp", 
+        "GitKraken", 
+        "VirtualBox",
+        "PowerPoint", 
+        "Calculator", 
+    ]
 
     # Iterate over all running processes
     for proc in psutil.process_iter(['pid', 'name']):
@@ -130,5 +143,12 @@ def open_whatsapp():
         print(Fore.RED + f"Failed to open WhatsApp: {e}" + Fore.RESET)
         
 
+def open_outlook():
+    try:
+        subprocess.run(["explorer.exe", "shell:appsFolder\\Microsoft.Office.Desktop.Outlook"])
+        print(Fore.GREEN + "Outlook opened." + Fore.RESET)
+        
+    except Exception as e:
+        print(Fore.RED + f"Failed to open Outlook: {e}" + Fore.RESET)
 
 

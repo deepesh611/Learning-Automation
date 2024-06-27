@@ -30,7 +30,7 @@ Ensure you have the following installed:
 3. **Running the Script Selection**
 
     - **Using PowerShell (Administrator)**
-    - You can create a shortcut of this file on the Desktop for ease of access, and perform `Run as Administrator` on Right-Click
+    - You can create a shortcut of this file on the Desktop for ease of access, and perform `Run with PowerShell` on Right-Click
         ```ps
         .\Script-Selection.ps1
         ```

@@ -152,3 +152,14 @@ def open_outlook():
         print(Fore.RED + f"Failed to open Outlook: {e}" + Fore.RESET)
 
 
+def open_ms_to_do():
+    try:
+        subprocess.run(["explorer.exe", "shell:appsFolder\\Microsoft.Todos_8wekyb3d8bbwe!App"])
+        print(Fore.GREEN + "Microsoft To Do opened." + Fore.RESET, end='')
+        
+    except Exception as e:
+        print(Fore.RED + f"Failed to open Microsoft To Do: {e}" + Fore.RESET, end='')
+        
+        
+        
+        

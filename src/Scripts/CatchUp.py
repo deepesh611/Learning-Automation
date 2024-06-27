@@ -8,13 +8,19 @@ Catch Up to the latest updates, may it be emails, messages, or any other form of
 # Import Modules
 import os
 import sys
+import webbrowser
 import importlib.util
+from colorama import Fore
 
 
-# Define Constants
+# Define Lists
 repo_path_to_perform_git_pull = [
     r"Actual (Full) Path to the Repository 1",
     r"Acutal (Full) Path to the Repository 2"
+]
+
+online_chat_links = [
+    "https://discord.com/channels/@me"
 ]
 
 
@@ -28,10 +34,19 @@ sys.modules["lib"] = lib
 spec.loader.exec_module(lib)
 
 
+# Define Functions
+def online_chat():
+    for link in online_chat_links:
+        webbrowser.open_new_tab(link)
+    print(Fore.GREEN + "\nOnline Chats Opened Successfully!\n" + Fore.RESET)
+
+
 def main():
     print()
     lib.open_whatsapp()
     lib.open_outlook()
+    lib.open_ms_to_do()
+    online_chat()
     
     for repos in repo_path_to_perform_git_pull:
         print(f"\nPerforming git pull in folder: {os.path.basename(os.path.normpath(repos))}")

@@ -179,18 +179,6 @@ def get_multiline_input():
     print(Fore.YELLOW + "Enter the input.\nPress CTRL+Z followed by Enter (Windows) or CTRL+D (Unix/Linux/Mac) to finish:\n" + Fore.RESET)
     lines = sys.stdin.read()
     return lines        
-    
-
-def encrypt_password(password, key):
-    fernet = Fernet(key)
-    encrypted_password = fernet.encrypt(password.encode())
-    return encrypted_password.decode()
-
-
-def decrypt_password(encrypted_password, key):
-    fernet = Fernet(key)
-    decrypted_password = fernet.decrypt(encrypted_password.encode())
-    return decrypted_password.decode()
 
 
 def generate_key():
@@ -239,5 +227,3 @@ def run_command(cmd):
         return result.returncode, result.stdout
     except subprocess.CalledProcessError as e:
         return e.returncode, e.stderr
-    
-    

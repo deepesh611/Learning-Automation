@@ -1,5 +1,5 @@
 # ───────────────────────────────
-#   APPLICATION DEPENDENCIES
+#       APPLICATION DEPENDENCIES
 # ───────────────────────────────
 
 psutil

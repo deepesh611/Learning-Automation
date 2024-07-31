@@ -1,14 +1,28 @@
 import os
+import sys
 import psutil
 import requests
+import inquirer
 import subprocess
 from colorama import Fore
+from cryptography.fernet import Fernet
 
 
 repo_path = "D:\\Codings\\"
 vscode_path = r"D:\Microsoft VS Code\Code.exe"
 gitkraken_path = r"<path to GitKraken executable>"
 edge_path = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+
+COLORS = {
+    'blue': '\033[34m',
+    'yellow': '\033[33m',
+    'green': '\033[32m',
+    'red': '\033[31m',
+    'cyan': '\033[36m',
+    'magenta': '\033[35m',
+    'reset': '\033[0m',
+    'white': '\033[37m'
+}
 
 
 def close_specific_applications():
@@ -161,5 +175,69 @@ def open_ms_to_do():
         print(Fore.RED + f"Failed to open Microsoft To Do: {e}" + Fore.RESET, end='')
         
         
-        
-        
+def get_multiline_input():
+    print(Fore.YELLOW + "Enter the input.\nPress CTRL+Z followed by Enter (Windows) or CTRL+D (Unix/Linux/Mac) to finish:\n" + Fore.RESET)
+    lines = sys.stdin.read()
+    return lines        
+    
+
+def encrypt_password(password, key):
+    fernet = Fernet(key)
+    encrypted_password = fernet.encrypt(password.encode())
+    return encrypted_password.decode()
+
+
+def decrypt_password(encrypted_password, key):
+    fernet = Fernet(key)
+    decrypted_password = fernet.decrypt(encrypted_password.encode())
+    return decrypted_password.decode()
+
+
+def generate_key():
+    return Fernet.generate_key()
+
+
+def load_key():
+    return open("secret.key", "rb").read()
+
+
+def use_checkboxs(dict, msg):
+    
+    # Define the checkbox prompt
+    questions = [
+        inquirer.Checkbox(
+            'selected',
+            message=msg,
+            choices=list(dict.keys())
+        )
+    ]
+
+    # Prompt the user and get the selected repositories
+    selected = inquirer.prompt(questions)['selected']
+    return selected
+
+
+def clear_screen():
+    sys.stdout.write("\033[H\033[J")  
+    
+
+def run_command(cmd):
+    
+    """
+    Run a command in Command Prompt.
+
+    Parameters:
+    - cmd (str): The command to be executed.
+
+    Returns:
+    - return_code (int): The return code of the command execution.
+    - output (str): The standard output of the command.
+    """
+    
+    try:
+        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=True)
+        return result.returncode, result.stdout
+    except subprocess.CalledProcessError as e:
+        return e.returncode, e.stderr
+    
+    

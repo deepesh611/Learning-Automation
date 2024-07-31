@@ -3,19 +3,19 @@ import os
 import sys
 import msvcrt
 import subprocess
+import importlib.util
+
+
+# Import Lib module
+lib_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'lib', 'lib.py'))
+spec = importlib.util.spec_from_file_location("lib", lib_path)
+lib = importlib.util.module_from_spec(spec)
+sys.modules["lib"] = lib
+spec.loader.exec_module(lib)
 
 
 # Define ANSI escape codes for colors
-COLORS = {
-    'blue': '\033[34m',
-    'yellow': '\033[33m',
-    'green': '\033[32m',
-    'red': '\033[31m',
-    'cyan': '\033[36m',
-    'magenta': '\033[35m',
-    'reset': '\033[0m',
-    'white': '\033[37m'
-}
+COLORS = lib.COLORS
 
 
 # Function to get colored script names
@@ -88,7 +88,7 @@ def select():
     
     selected_script = strip_ansi_codes(SCRIPTS[selected_index])
     actual_script = SCRIPT_MAPPING[selected_script]
-    script_path = os.path.join("./Automation Scripts", actual_script)
+    script_path = os.path.join("./Scripts", actual_script)
     command = f'python "{script_path}"'
     subprocess.Popen(command, shell=True)
 

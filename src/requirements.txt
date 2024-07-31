@@ -5,4 +5,5 @@
 psutil
 colorama
 requests
+inquirer
 subprocess.run

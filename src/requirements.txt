@@ -6,4 +6,5 @@ psutil
 colorama
 requests
 inquirer
+cryptography
 subprocess.run

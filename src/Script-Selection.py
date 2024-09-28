@@ -32,11 +32,12 @@ def get_colored_scripts():
     scripts = []
 
     for i, file in enumerate(files):
-        if file.endswith(".py"):
-            script_name = file[:-3]                                                     # Remove .py extension from file names
-            colored_script = colors[i % len(colors)] + script_name + COLORS['reset']
-            scripts.append(colored_script)
-            script_mapping[script_name] = file
+        if file != "lib.py":
+            if file.endswith(".py"):
+                script_name = file[:-3]                                                     # Remove .py extension from file names
+                colored_script = colors[i % len(colors)] + script_name + COLORS['reset']
+                scripts.append(colored_script)
+                script_mapping[script_name] = file
 
     return scripts, script_mapping
 

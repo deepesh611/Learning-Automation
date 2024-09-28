@@ -12,9 +12,12 @@ else {
     Write-Host ""
 }
 
+# Change Directory to the current script location
+Set-Location -Path "./src"
 
 # Open and execute the Python Script in the same window, wait for it to finish
 Start-Process -FilePath "python" -ArgumentList "./Script-Selection.py" -NoNewWindow -Wait
+Set-Location -Path ".."
 
 # Pause for 1 second
 Start-Sleep -Seconds 1

@@ -36,8 +36,8 @@ fi
 
 
 # Start pip installation for any additional requirements
-if [ -f requirements.txt ]; then
-    if pip install -r requirements.txt; then
+if [ -f ./src/requirements.txt ]; then
+    if pip install -r ./src/requirements.txt; then
         echo -e "${GREEN}\nModules installed Successfully...${NC}"
     else
         echo -e "${RED}\nFailed to install modules.${NC}"

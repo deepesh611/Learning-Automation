@@ -7,7 +7,7 @@ import importlib.util
 
 
 # Import Lib module
-lib_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'lib', 'lib.py'))
+lib_path = os.path.abspath(os.path.join(os.path.dirname(__file__), 'Scripts', 'lib.py'))
 spec = importlib.util.spec_from_file_location("lib", lib_path)
 lib = importlib.util.module_from_spec(spec)
 sys.modules["lib"] = lib

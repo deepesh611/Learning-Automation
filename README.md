@@ -2,7 +2,6 @@
 <!-- BADGES -->
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
-![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 <!-- BADGES-END -->
 
@@ -15,14 +14,13 @@ This repository contains various automation scripts and a common library of func
 Ensure you have the following installed:
 - Python 3.x
 - Pip (Python package installer)
-- Jupyter Notebook (optional, for working with `lib.ipynb`)
 
 ### Setup 🛠️
 
 1. **Clone the repository**
     ```sh
     git clone https://github.com/deepesh611/Learning-Automation.git
-    cd Learning-Automation/src
+    cd Learning-Automation
     ```
 
 2. **Run `setup.sh` to install dependencies**
@@ -65,8 +63,6 @@ Ensure you have the following installed:
 2. **Modifying the Common Library**
 
     - Add or modify functions in `lib.py`.
-    - If you're working in a Jupyter environment, update `lib.ipynb` accordingly.
-    - Always ensure changes are reflected in both `lib.py` and `lib.ipynb`.
 
 ## Contributing 🤝
 
@@ -76,7 +72,7 @@ Contributions are always appreciated. Here are some guidelines to help you get s
 2. If you've added code that should be tested, add tests.
 3. If you've changed any scripts or the common library, update the documentation.
 4. Ensure the new code or scripts follow the existing style and format.
-5. Update both `lib.py` and `lib.ipynb` when modifying the common library functions.
+5. Update both `lib.py` when modifying the common library functions.
 6. Make sure that you have given proper description in your PR
 7. Include your GitHub profile picture and name in the contributors section below.
 
